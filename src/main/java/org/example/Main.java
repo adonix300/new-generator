@@ -10,8 +10,8 @@ public class Main {
         BlockingQueue<String> queueB = new ArrayBlockingQueue<>(100);
         BlockingQueue<String> queueC = new ArrayBlockingQueue<>(100);
 
-        for (int i = 0; i < 100; i++) {
-            String text = generateText("abc", 100);
+        for (int i = 0; i < 10_000; i++) {
+            String text = generateText("abc", 100_000);
             try {
                 queueA.put(text);
                 queueB.put(text);
